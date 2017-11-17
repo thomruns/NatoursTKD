@@ -53,12 +53,14 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%); /* To center the div containing the headline */
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden; /* correct shake at end of animating element */
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -114,4 +116,29 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+.btn:link,
+.bth:visited { /* use of pseudoclass state */
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2; /*  transition on initial state */
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
