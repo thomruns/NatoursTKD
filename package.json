@@ -1,0 +1,26 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for Natours Udemy course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomruns/NatoursTKD.git"
+  },
+  "keywords": [
+    "udemy",
+    "natours"
+  ],
+  "author": "Thom David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomruns/NatoursTKD/issues"
+  },
+  "homepage": "https://github.com/thomruns/NatoursTKD#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.1"
+  }
+}
