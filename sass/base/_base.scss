@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; // to inherit border-box sizing from body style  
+}
+
+// To establish global measuring units
+html {
+    font-size: 62.5%; // assumes a 16px default browser font-size; equiv to 10px 
+}
+
+// Universal box sizing 
+body {
+    box-sizing: border-box;
+}
