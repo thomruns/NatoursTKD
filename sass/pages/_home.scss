@@ -1,0 +1,9 @@
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -25vh; //to move the gray background up behind hero
+
+    & .col-1-of-2 {
+        
+    }
+}
