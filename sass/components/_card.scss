@@ -31,7 +31,7 @@
     }
 
     &:hover &__side--front {
-        transform: rotateY(180deg); //perspective property on parent
+        transform: rotateY(-180deg); //perspective property on parent
     }
 
     &:hover &__side--back {
