@@ -19,14 +19,41 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%); //defines the shape w identical parameters of shape-outside
         transform: translateX(-3rem) skewX(12deg);
+        position: relative;
     }
 
     &__img {
         height: 100%; //for images taller than wide; would be width if reversed
-        
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden; //corrects odd shape behavior due to translateX property
+        transition: all .5s;
     }
 
     &__text {
         transform: skewX(12deg);
+    }
+
+    &__caption {  //initial state of the image caption
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden; //correct slight shake at end of transition
+    }
+
+    &:hover &__caption { //hover state of the image caption
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);        
+        filter: blur(3px) brightness(80%);
     }
 }
