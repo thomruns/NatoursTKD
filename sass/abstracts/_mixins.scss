@@ -31,6 +31,10 @@ $breakpoint argument choices:
 1 em = 16px
 
 Order matters when these mixin includes are used in CSS. Large to small
+    in a desktop-first design like this; Small-to-large in a 
+    mobile-first design
+
+ORDER: Base + typography > general layout + grid > page layout > components
 ***************************************/
 
 @mixin respond($breakpoint) {

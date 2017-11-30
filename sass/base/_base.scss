@@ -26,4 +26,9 @@ html {
 // Universal box sizing 
 body {
     box-sizing: border-box;
+    padding: 3rem; // 30px white border around entire page 
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }

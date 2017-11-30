@@ -10,6 +10,11 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); // clip the image 
 
+    @include respond(phone){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); // clip the image 
+    }
+
     &__logo-box {
         position: absolute;
         top: 4rem;
