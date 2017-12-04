@@ -32,11 +32,20 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+        @include respond(phone) {
+            display: inline;
+            padding: 2rem 2rem;
+        }
     }
 
     &__left {
         width: 33.3333%;
         display: table-cell;
+
+        @include respond(phone) {
+            width: 50%;
+            display: inline;
+        }
     }
 
     &__right {
@@ -44,11 +53,21 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(phone) {
+            width: 100%;
+            display: inline;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+        @include respond(phone) {
+            width: 50%;
+            display: inline;
+            float: left;
+        }
     }
 
     &__text {
@@ -62,6 +81,10 @@
         column-count: 2;
         column-gap: 4rem;
         column-rule: 1px solid $color-grey-light-2;
+
+        @include respond(phone) {
+            column-count: 1;
+        }
 
 
         -moz-hyphens: auto;
