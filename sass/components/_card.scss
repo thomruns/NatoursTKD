@@ -161,7 +161,9 @@
         font-weight: 100;
     }
 // MEDIA QUERY HERE *****************************************
-    @include respond(tab-port) {
+    //@include respond(tab-port) {  //include cannot be used bc of addition of touch screen behavior
+    @media only screen and(max-width: 56.25em), 
+            only screen and (hover:none) { //touch screen behavior
         height: auto; //to prevent collapse due to child absolute positioning
         border-radius: 3px;
         background-color: $color-white;
