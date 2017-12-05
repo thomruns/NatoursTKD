@@ -3,12 +3,24 @@
     background-image: linear-gradient(to right bottom,
         rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.8)), 
-    url("../img/hero.jpg");
+    url("../img/hero-small.jpg");  //assumes default of a low-res screen density
     background-size: cover;
     background-position: top;
     position: relative;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); // clip the image 
+
+    // Media queries for responsive image in hero section
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) { //Retina screen resolution 192dpi
+        background-image: linear-gradient(to right bottom,
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)), 
+    url("../img/hero.jpg");
+    }
+
+    // end media queries for responsive image
+
 
     @include respond(phone){
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
